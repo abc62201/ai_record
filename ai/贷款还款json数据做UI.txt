@@ -1,5 +1,5 @@
 用户提问：
-我需要通过下面的代码生成的json在前端生成一个
+我需要通过下面的代码生成的json在前端生成一个到我的set_loan()函数中使用set_cont.innerHTML生成
 <div>${income_expense}
 <div >${loan_table.category}${loan_table.label}${loan_table.total_price}
 </div>
@@ -41,3 +41,64 @@ set_cont.innerHTML = `${loan}`;
   }
 ]
  
+ai回复:
+
+老朋友，这个思路非常对！把样式直接写在 div 的 style 属性里（内联样式），完全不用担心类名冲突，代码移植性也更强，特别适合你这种多次调用 AI 生成代码的场景。
+
+我帮你把所有 CSS 都改成了内联样式，直接复制下面的代码替换你原来的 set_loan() 函数就行：
+
+function set_loan() {
+    let loan = AndroidBridge.getloanData();
+    let loanData = JSON.parse(loan);
+
+    let html = '';
+    let totalCount = 0;
+    let totalAmount = 0;
+
+    loanData.forEach(group => {
+        let groupCount = group.loan_table.length;
+        let groupSum = group.loan_table.reduce((sum, item) => sum + item.total_price, 0);
+        totalCount += groupCount;
+        totalAmount += groupSum;
+
+        // 分组大卡片容器
+        html += <div style="background:#fff;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">;
+
+        // 分组标题（贷款/还款）
+        html += <div style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:14px 16px;font-size:16px;font-weight:bold;">{group.income_expense}</div>;
+
+        // 格子容器（自动换行的 flex 布局，手机上自适应）
+        html += <div style="display:flex;flex-wrap:wrap;gap:10px;padding:12px;">;
+
+        group.loan_table.forEach(item => {
+            // 每个小格子
+            html += 
+                <div style="background:#fafafa;border-radius:8px;padding:12px;text-align:center;border:1px solid #eee;flex:1 1 140px;min-width:140px;">
+                    <div style="font-size:14px;color:#333;font-weight:500;">{item.category}</div>
+                    <div style="font-size:12px;color:#999;margin:4px 0;">{item.label}</div>
+                    <div style="font-size:16px;color:#e74c3c;font-weight:bold;margin-top:6px;">¥{item.total_price.toFixed(2)}</div>
+                </div>;
+        });
+
+        html += </div>;
+
+        // 分组底部统计
+        html += <div style="display:flex;justify-content:space-between;padding:10px 16px;background:#f9f9f9;font-size:13px;color:#666;border-top:1px solid #eee;">
+            <span>共 {groupCount} 条</span>
+            <span>合计 ¥{groupSum.toFixed(2)}</span>
+        </div>;
+
+        html += </div>;
+    });
+
+    set_cont.innerHTML = html;
+}
+
+改动说明：
+所有样式都直接写在每个 div 的 style="" 里了，完全不需要额外的 <style> 标签或 CSS 文件
+格子布局从 grid 改成了 flex + flex-wrap，在手机上也能自动换行适配，效果一样
+视觉效果和之前完全一致：白色卡片、渐变标题、红色金额、底部统计汇总
+
+你直接替换进去就能用，以后不管 AI 生成多少段代码，都不会有样式冲突的问题了！
+
+样式颜色、格子大小这些不满意的话，你直接说改哪里就行，我帮你调。
