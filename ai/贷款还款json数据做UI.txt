@@ -1,0 +1,43 @@
+用户提问：
+我需要通过下面的代码生成的json在前端生成一个
+<div>${income_expense}
+<div >${loan_table.category}${loan_table.label}${loan_table.total_price}
+</div>
+${loan_table求总个数}${loan_table.total_price求和}
+</div>
+合适在手机上查看一个漂亮的格子式的聚合数据。目的就是 希望用户一眼就能看明白无需费事分析。
+//前端数据接收
+function set_loan(){
+    let loan = AndroidBridge.getloanData();
+    loanData = JSON.parse(loan);
+set_cont.innerHTML = `${loan}`;
+}
+//数据聚合
+    public Cursor getLoanSummary() {
+        String sql = "SELECT income_expense, label, category, " +
+                "SUM(total_price) AS total_price, " +
+                "SUM(quantity) AS quantity " +
+                "FROM finance_records " +
+                "WHERE income_expense IN ('贷款', '还款') " +
+                "GROUP BY income_expense, label, category " +
+                "ORDER BY income_expense, total_price DESC";
+        return querySql(sql);
+    }
+
+//getloanData()通过函数获取json数据格式如下
+[
+  {
+    "income_expense": "贷款",
+    "loan_table": [
+      {"label": "房贷", "category": "工商银行", "total_price": 50000.0},
+      {"label": "车贷", "category": "建设银行", "total_price": 120000.0}
+    ]
+  },
+  {
+    "income_expense": "还款",
+    "loan_table": [
+      {"label": "房贷", "category": "工商银行", "total_price": 3000.0}
+    ]
+  }
+]
+ 

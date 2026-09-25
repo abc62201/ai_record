@@ -1,1 +1,3 @@
 目录文件地址：https://gitee.com/abc62201/ai_record/raw/master/ai/record.txt
+
+1.贷款还款json数据做UI：https://gitee.com/abc62201/ai_record/raw/master/ai/贷款还款json数据做UI.txt
