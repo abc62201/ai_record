@@ -1,0 +1,3 @@
+模型文件是ggml-medium.bin
+
+C:\Users\Administrator\AppData\Roaming\PotPlayerMini64\Model
