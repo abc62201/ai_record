@@ -4,3 +4,5 @@
 2.PotPlayer播放器实时翻译ai模型放置位置:https://gitee.com/abc62201/ai_record/raw/master/ai/PotPlayer.txt
 3.gitee密码自动缓存：https://gitee.com/abc62201/ai_record/raw/master/ai/gitee密码自动缓存.txt
 4.ai财务助手软件功能及制作思路：https://gitee.com/abc62201/ai_record/raw/master/ai/ai财务助手软件功能及制作思路.txt
+5.ai财务助手(会意)开源地址:https://gitee.com/abc62201/ai_ledger
+6.会意财务助手演示文本：https://gitee.com/abc62201/ai_record/raw/master/ai/会意财务助手演示文本.txt
