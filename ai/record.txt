@@ -6,3 +6,4 @@
 4.ai财务助手软件功能及制作思路：https://gitee.com/abc62201/ai_record/raw/master/ai/ai财务助手软件功能及制作思路.txt
 5.ai财务助手(会意)开源地址:https://gitee.com/abc62201/ai_ledger
 6.会意财务助手演示文本：https://gitee.com/abc62201/ai_record/raw/master/ai/会意财务助手演示文本.txt
+7.2026-10-6日会意财务助手更新思路：https://gitee.com/abc62201/ai_record/raw/master/ai/2026-10-6日会意财务助手更新思路.txt
