@@ -58,7 +58,6 @@ def 扫描目录(scan_dir_name):
             continue
         
         # 检查是否在排除路径中
-        full_path = os.path.join(scan_path, entry)
         skip = False
         for excluded in 排除的路径:
             if excluded in entry:
@@ -69,15 +68,6 @@ def 扫描目录(scan_dir_name):
         
         # 读取文件第一行非空文字作为描述
         desc = entry.rsplit('.', 1)[0]  # 默认用文件名(去扩展名)
-        try:
-            with open(full_path, 'r', encoding='utf-8') as f:
-                for line in f:
-                    line = line.strip()
-                    if line:
-                        desc = line
-                        break
-        except Exception as e:
-            print(f"  [读取失败] {entry}: {e}")
         
         relative_path = os.path.join(scan_dir_name, entry)
         

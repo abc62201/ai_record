@@ -1,4 +1,4 @@
 # git日记仓库 目录索引
 # 自动生成, 请勿手动修改
 
-1.这是你的新*仓库*。:https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/欢迎.md
+1.欢迎:https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/欢迎.md
