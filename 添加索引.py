@@ -129,7 +129,7 @@ def 生成readme_md(all_dir_files):
                 continue
             anchor = scan_dir_name.replace(' ', '-')
             # 用 HTML a 标签写链接
-            f.write(f'- <a href="#{anchor}">{scan_dir_name}</a>（{len(files)} 个文件）\n')
+            f.write(f'- <a href="#-{anchor}">{scan_dir_name}</a>（{len(files)} 个文件）\n')
         f.write("\n---\n\n")
         
         # ========== 各目录详情 ==========
