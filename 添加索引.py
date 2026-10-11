@@ -151,29 +151,6 @@ def 生成readme_md(all_dir_files):
             f.write("<div align=\"right\"><a href=\"#📚-ai_record-项目目录索引\">⬆ 返回顶部</a></div>\n\n")
             f.write("---\n\n")
         
-        # ========== 按文件名索引（方便查找） ==========
-        f.write("## 🔍 按文件名索引\n\n")
-        f.write("<details>\n")
-        f.write("<summary>点击展开完整文件列表（按字母排序）</summary>\n\n")
-        
-        # 收集所有文件并按文件名排序
-        all_files = []
-        for scan_dir_name, files in all_dir_files:
-            for file_info in files:
-                all_files.append((scan_dir_name, file_info))
-        all_files.sort(key=lambda x: x[1]['file'].lower())
-        
-        # 按首字母分组
-        current_letter = ''
-        for scan_dir_name, file_info in all_files:
-            first_char = file_info['file'][0].upper()
-            if first_char != current_letter:
-                current_letter = first_char
-                f.write(f"\n### {current_letter}\n\n")
-            f.write(f"- `{file_info['file']}` — [{file_info['desc']}]({file_info['readme_url']})\n")
-        
-        f.write("\n</details>\n\n")
-        
         # ========== 页脚 ==========
         f.write("---\n\n")
         f.write("<div align=\"center\">\n\n")

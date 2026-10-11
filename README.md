@@ -43,46 +43,6 @@
 
 ---
 
-## 🔍 按文件名索引
-
-<details>
-<summary>点击展开完整文件列表（按字母排序）</summary>
-
-
-### 2
-
-- `2026-10-6日会意财务助手更新思路.txt` — [2026-10-6日会意财务助手更新思路](https://gitee.com/abc62201/ai_record/tree/master/ai/2026-10-6日会意财务助手更新思路.txt)
-
-### A
-
-- `ai财务助手软件功能及制作思路.txt` — [ai财务助手软件功能及制作思路](https://gitee.com/abc62201/ai_record/tree/master/ai/ai财务助手软件功能及制作思路.txt)
-
-### G
-
-- `gitee密码自动缓存.txt` — [gitee密码自动缓存](https://gitee.com/abc62201/ai_record/tree/master/ai/gitee密码自动缓存.txt)
-
-### P
-
-- `PotPlayer.txt` — [PotPlayer](https://gitee.com/abc62201/ai_record/tree/master/ai/PotPlayer.txt)
-
-### 会
-
-- `会意财务助手演示文本.txt` — [会意财务助手演示文本](https://gitee.com/abc62201/ai_record/tree/master/ai/会意财务助手演示文本.txt)
-
-### 欢
-
-- `欢迎.md` — [欢迎](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/欢迎.md)
-
-### 测
-
-- `测试.txt` — [测试](https://gitee.com/abc62201/ai_record/tree/master/ai/测试.txt)
-
-### 贷
-
-- `贷款还款json数据做UI.txt` — [贷款还款json数据做UI](https://gitee.com/abc62201/ai_record/tree/master/ai/贷款还款json数据做UI.txt)
-
-</details>
-
 ---
 
 <div align="center">
