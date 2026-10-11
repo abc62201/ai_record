@@ -105,21 +105,80 @@ def 生成readme_md(all_dir_files):
     """生成给人阅读的 README.md"""
     readme_path = os.path.join(script_dir, readme文件名)
     
+    # 统计总文件数
+    total = sum(len(files) for _, files in all_dir_files if files)
+    
     with open(readme_path, 'w', encoding='utf-8') as f:
-        f.write("# ai_record 项目目录索引\n\n")
-        f.write(f"> 自动生成, 请勿手动修改\n\n")
+        # ========== 头部 ==========
+        f.write("# 📚 ai_record 项目目录索引\n\n")
+        f.write("> 🤖 本文件由脚本自动生成，请勿手动修改\n\n")
         
+        # ========== 统计信息 ==========
+        f.write("## 📊 统计\n\n")
+        f.write(f"| 指标 | 数值 |\n")
+        f.write(f"| :--- | :---: |\n")
+        f.write(f"| 目录数 | {sum(1 for _, files in all_dir_files if files)} |\n")
+        f.write(f"| 文件总数 | {total} |\n")
+        f.write(f"| 支持格式 | {', '.join(sorted(指定文件类型))} |\n\n")
+        
+        # ========== 快速导航 ==========
+        f.write("## 🧭 快速导航\n\n")
+        for scan_dir_name, files in all_dir_files:
+            if not files:
+                continue
+            anchor = scan_dir_name.replace(' ', '-').lower()
+            f.write(f"- [{scan_dir_name}](#{anchor})（{len(files)} 个文件）\n")
+        f.write("\n")
+        f.write("---\n\n")
+        
+        # ========== 各目录详情 ==========
         for scan_dir_name, files in all_dir_files:
             if not files:
                 continue
             
-            f.write(f"## {scan_dir_name}\n\n")
+            f.write(f"## 📁 {scan_dir_name}\n\n")
             
+            # 表格形式展示
+            f.write("| # | 描述 | 文件 |\n")
+            f.write("| :---: | :--- | :---: |\n")
             for i, file_info in enumerate(files, 1):
-                # Markdown 链接格式
-                f.write(f"{i}. [{file_info['desc']}]({file_info['readme_url']})\n")
+                desc = file_info['desc']
+                readme_url = file_info['readme_url']
+                filename = file_info['file']
+                f.write(f"| {i} | [{desc}]({readme_url}) | `{filename}` |\n")
             
             f.write("\n")
+            f.write("<div align=\"right\"><a href=\"#📚-ai_record-项目目录索引\">⬆ 返回顶部</a></div>\n\n")
+            f.write("---\n\n")
+        
+        # ========== 按文件名索引（方便查找） ==========
+        f.write("## 🔍 按文件名索引\n\n")
+        f.write("<details>\n")
+        f.write("<summary>点击展开完整文件列表（按字母排序）</summary>\n\n")
+        
+        # 收集所有文件并按文件名排序
+        all_files = []
+        for scan_dir_name, files in all_dir_files:
+            for file_info in files:
+                all_files.append((scan_dir_name, file_info))
+        all_files.sort(key=lambda x: x[1]['file'].lower())
+        
+        # 按首字母分组
+        current_letter = ''
+        for scan_dir_name, file_info in all_files:
+            first_char = file_info['file'][0].upper()
+            if first_char != current_letter:
+                current_letter = first_char
+                f.write(f"\n### {current_letter}\n\n")
+            f.write(f"- `{file_info['file']}` — [{file_info['desc']}]({file_info['readme_url']})\n")
+        
+        f.write("\n</details>\n\n")
+        
+        # ========== 页脚 ==========
+        f.write("---\n\n")
+        f.write("<div align=\"center\">\n\n")
+        f.write(f"📅 最后更新：由 `添加索引.py` 自动生成\n\n")
+        f.write("</div>\n")
     
     print(f"  [生成] {readme_path}")
 
