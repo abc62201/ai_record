@@ -127,9 +127,9 @@ def 生成readme_md(all_dir_files):
         for scan_dir_name, files in all_dir_files:
             if not files:
                 continue
-            # 用纯目录名作为锚点，避免 emoji 编码问题
             anchor = scan_dir_name.replace(' ', '-')
-            f.write(f"- [{scan_dir_name}](#{anchor})（{len(files)} 个文件）\n")
+            # 用 HTML a 标签写链接
+            f.write(f'- <a href="#{anchor}">{scan_dir_name}</a>（{len(files)} 个文件）\n')
         f.write("\n---\n\n")
         
         # ========== 各目录详情 ==========
@@ -137,7 +137,7 @@ def 生成readme_md(all_dir_files):
             if not files:
                 continue
             
-            # 用 HTML h2 手动指定 id，确保锚点跳转可靠
+            # 用 HTML h2 手动指定 id
             anchor = scan_dir_name.replace(' ', '-')
             f.write(f'<h2 id="{anchor}">📁 {scan_dir_name}</h2>\n\n')
             
