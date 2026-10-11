@@ -1,5 +1,7 @@
 # 📚 ai_record 项目目录索引
 
+<a id="top"></a>
+
 > 🤖 本文件由脚本自动生成，请勿手动修改
 
 ## 📊 统计
@@ -12,12 +14,12 @@
 
 ## 🧭 快速导航
 
-- [ai](#📁-ai)（7 个文件）
-- [git日记仓库](#📁-git日记仓库)（1 个文件）
+- [ai](#ai)（7 个文件）
+- [git日记仓库](#git日记仓库)（1 个文件）
 
 ---
 
-## 📁 ai
+<h2 id="ai">📁 ai</h2>
 
 | # | 描述 | 文件 |
 | :---: | :--- | :---: |
@@ -29,17 +31,17 @@
 | 6 | [测试](https://gitee.com/abc62201/ai_record/tree/master/ai/测试.txt) | `测试.txt` |
 | 7 | [贷款还款json数据做UI](https://gitee.com/abc62201/ai_record/tree/master/ai/贷款还款json数据做UI.txt) | `贷款还款json数据做UI.txt` |
 
-<div align="right"><a href="#📚-ai_record-项目目录索引">⬆ 返回顶部</a></div>
+<div align="right"><a href="#top">⬆ 返回顶部</a></div>
 
 ---
 
-## 📁 git日记仓库
+<h2 id="git日记仓库">📁 git日记仓库</h2>
 
 | # | 描述 | 文件 |
 | :---: | :--- | :---: |
 | 1 | [欢迎](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/欢迎.md) | `欢迎.md` |
 
-<div align="right"><a href="#📚-ai_record-项目目录索引">⬆ 返回顶部</a></div>
+<div align="right"><a href="#top">⬆ 返回顶部</a></div>
 
 ---
 

@@ -111,34 +111,35 @@ def 生成readme_md(all_dir_files):
     with open(readme_path, 'w', encoding='utf-8') as f:
         # ========== 头部 ==========
         f.write("# 📚 ai_record 项目目录索引\n\n")
+        f.write('<a id="top"></a>\n\n')
         f.write("> 🤖 本文件由脚本自动生成，请勿手动修改\n\n")
         
         # ========== 统计信息 ==========
         f.write("## 📊 统计\n\n")
-        f.write(f"| 指标 | 数值 |\n")
-        f.write(f"| :--- | :---: |\n")
+        f.write("| 指标 | 数值 |\n")
+        f.write("| :--- | :---: |\n")
         f.write(f"| 目录数 | {sum(1 for _, files in all_dir_files if files)} |\n")
         f.write(f"| 文件总数 | {total} |\n")
         f.write(f"| 支持格式 | {', '.join(sorted(指定文件类型))} |\n\n")
         
         # ========== 快速导航 ==========
-           # ========== 快速导航 ==========
         f.write("## 🧭 快速导航\n\n")
         for scan_dir_name, files in all_dir_files:
             if not files:
                 continue
-            # 锚点需要匹配标题的完整格式：emoji + 空格变-
-            anchor = f"📁-{scan_dir_name.replace(' ', '-')}"
+            # 用纯目录名作为锚点，避免 emoji 编码问题
+            anchor = scan_dir_name.replace(' ', '-')
             f.write(f"- [{scan_dir_name}](#{anchor})（{len(files)} 个文件）\n")
-        f.write("\n")
-        f.write("---\n\n")
+        f.write("\n---\n\n")
         
         # ========== 各目录详情 ==========
         for scan_dir_name, files in all_dir_files:
             if not files:
                 continue
             
-            f.write(f"## 📁 {scan_dir_name}\n\n")
+            # 用 HTML h2 手动指定 id，确保锚点跳转可靠
+            anchor = scan_dir_name.replace(' ', '-')
+            f.write(f'<h2 id="{anchor}">📁 {scan_dir_name}</h2>\n\n')
             
             # 表格形式展示
             f.write("| # | 描述 | 文件 |\n")
@@ -150,12 +151,12 @@ def 生成readme_md(all_dir_files):
                 f.write(f"| {i} | [{desc}]({readme_url}) | `{filename}` |\n")
             
             f.write("\n")
-            f.write("<div align=\"right\"><a href=\"#📚-ai_record-项目目录索引\">⬆ 返回顶部</a></div>\n\n")
+            f.write('<div align="right"><a href="#top">⬆ 返回顶部</a></div>\n\n')
             f.write("---\n\n")
         
         # ========== 页脚 ==========
-        f.write("<div align=\"center\">\n\n")
-        f.write(f"📅 最后更新：由 `添加索引.py` 自动生成\n\n")
+        f.write('<div align="center">\n\n')
+        f.write("📅 最后更新：由 `添加索引.py` 自动生成\n\n")
         f.write("</div>\n")
     
     print(f"  [生成] {readme_path}")
