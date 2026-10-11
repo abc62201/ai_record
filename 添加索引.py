@@ -128,8 +128,7 @@ def 生成readme_md(all_dir_files):
             if not files:
                 continue
             anchor = scan_dir_name.replace(' ', '-')
-            # 用 HTML a 标签写链接
-            f.write(f'- <a href="#-{anchor}">{scan_dir_name}</a>（{len(files)} 个文件）\n')
+            f.write(f'- <a href="#{anchor}">{scan_dir_name}</a>（{len(files)} 个文件）\n')
         f.write("\n---\n\n")
         
         # ========== 各目录详情 ==========
@@ -140,6 +139,11 @@ def 生成readme_md(all_dir_files):
             # 用 HTML h2 手动指定 id
             anchor = scan_dir_name.replace(' ', '-')
             f.write(f'<h2 id="{anchor}">📁 {scan_dir_name}</h2>\n\n')
+            
+            # 添加 record.txt 链接，用代码块包裹方便复制
+            record_url = f"{给AI直接获取的}{scan_dir_name}/{record文件名}"
+            f.write(f"**📋 复制给 AI 的索引文件：**\n\n")
+            f.write(f"`{record_url}`\n\n")
             
             # 表格形式展示
             f.write("| # | 描述 | 文件 |\n")

@@ -14,12 +14,16 @@
 
 ## 🧭 快速导航
 
-- <a href="#-ai">ai</a>（7 个文件）
-- <a href="#-git日记仓库">git日记仓库</a>（1 个文件）
+- <a href="#ai">ai</a>（7 个文件）
+- <a href="#git日记仓库">git日记仓库</a>（1 个文件）
 
 ---
 
 <h2 id="ai">📁 ai</h2>
+
+**📋 复制给 AI 的索引文件：**
+
+`https://gitee.com/abc62201/ai_record/raw/master/ai/record.txt`
 
 | # | 描述 | 文件 |
 | :---: | :--- | :---: |
@@ -36,6 +40,10 @@
 ---
 
 <h2 id="git日记仓库">📁 git日记仓库</h2>
+
+**📋 复制给 AI 的索引文件：**
+
+`https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/record.txt`
 
 | # | 描述 | 文件 |
 | :---: | :--- | :---: |
