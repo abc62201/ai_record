@@ -12,8 +12,8 @@
 
 ## 🧭 快速导航
 
-- [ai](#ai)（7 个文件）
-- [git日记仓库](#git日记仓库)（1 个文件）
+- [ai](#📁-ai)（7 个文件）
+- [git日记仓库](#📁-git日记仓库)（1 个文件）
 
 ---
 
@@ -40,8 +40,6 @@
 | 1 | [欢迎](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/欢迎.md) | `欢迎.md` |
 
 <div align="right"><a href="#📚-ai_record-项目目录索引">⬆ 返回顶部</a></div>
-
----
 
 ---
 

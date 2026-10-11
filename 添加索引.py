@@ -122,11 +122,13 @@ def 生成readme_md(all_dir_files):
         f.write(f"| 支持格式 | {', '.join(sorted(指定文件类型))} |\n\n")
         
         # ========== 快速导航 ==========
+           # ========== 快速导航 ==========
         f.write("## 🧭 快速导航\n\n")
         for scan_dir_name, files in all_dir_files:
             if not files:
                 continue
-            anchor = scan_dir_name.replace(' ', '-').lower()
+            # 锚点需要匹配标题的完整格式：emoji + 空格变-
+            anchor = f"📁-{scan_dir_name.replace(' ', '-')}"
             f.write(f"- [{scan_dir_name}](#{anchor})（{len(files)} 个文件）\n")
         f.write("\n")
         f.write("---\n\n")
@@ -152,7 +154,6 @@ def 生成readme_md(all_dir_files):
             f.write("---\n\n")
         
         # ========== 页脚 ==========
-        f.write("---\n\n")
         f.write("<div align=\"center\">\n\n")
         f.write(f"📅 最后更新：由 `添加索引.py` 自动生成\n\n")
         f.write("</div>\n")
