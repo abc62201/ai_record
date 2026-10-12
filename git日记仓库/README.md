@@ -124,28 +124,28 @@
 ## 软件截图
 ![运行界面|233](image/1.png)
 ## 菜单
-![菜单](2.png)
+![菜单](image/2.png)
 ## 填写api
-![填写api](3.png)
+![填写api](image/3.png)
 > 以下为 AI 财务助手的部分界面截图，展示记账、查询、日历、打赏等核心功能。
 ### 记账界面
 
-![记账界面](4.png)
+![记账界面](image/4.png)
 ### 查询界面
 
-![查询界面](6.png)
+![查询界面](image/6.png)
 
 ### 日历显示
 
-![日历显示](5.png)
+![日历显示](image/5.png)
 
 ### 债权关系
 
-![债权关系](7.png)
+![债权关系](image/7.png)
 
 ### 用户打赏
 
-![微信|344](wechat_pay.png)![[alipay.png|311]]
+![微信|344](image/wechat_pay.png)![[image/alipay.png|311]]
 
 
 
