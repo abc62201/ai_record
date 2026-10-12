@@ -122,7 +122,7 @@
 ---
 
 ## 软件截图
-![运行界面|233](image/1.png)
+<img src="image/1.png" alt="运行界面" width="233">
 ## 菜单
 ![菜单](image/2.png)
 ## 填写api
@@ -145,8 +145,10 @@
 
 ### 用户打赏
 
-<img src="image/wechat_pay.png" alt="微信" width="344">
-<img src="image/alipay.png" alt="支付宝" width="311">
+<div style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+  <img src="image/wechat_pay.png" alt="微信" width="344">
+  <img src="image/alipay.png" alt="支付宝" width="311">
+</div>
 
 
 
