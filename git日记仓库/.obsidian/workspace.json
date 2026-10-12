@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Excalidraw/t1.excalidraw.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "t1.excalidraw"
+              "title": "README"
             }
           }
         ]
@@ -201,9 +201,22 @@
   },
   "active": "34709dbe9f6a8937",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-10-12 13.35.55.excalidraw.md",
-    "Excalidraw/t1.excalidraw.md",
     "电脑实用/微软电脑管家与一些快捷键.md",
+    "README.md",
+    "image/wechat_pay.png",
+    "image/alipay.png",
+    "image/7.png",
+    "image/6.png",
+    "image/5.png",
+    "image/4.png",
+    "image/3.png",
+    "image/2.png",
+    "image/1.png",
+    "image",
+    "新建文件夹",
+    "wechat_pay.png",
+    "Excalidraw/t1.excalidraw.md",
+    "Excalidraw/Drawing 2026-10-12 13.35.55.excalidraw.md",
     "Excalidraw/空图.excalidraw.md",
     "Excalidraw/Libraries/web-kit.excalidrawlib",
     "Excalidraw/Libraries/UML-ER-library.excalidrawlib",
@@ -213,8 +226,6 @@
     "Excalidraw/Libraries/stick-people.excalidrawlib",
     "Excalidraw/Libraries/stick-figures.excalidrawlib",
     "Excalidraw/Libraries/some-handdrawn-signs.excalidrawlib",
-    "Excalidraw/Libraries/software-architecture.excalidrawlib",
-    "Excalidraw/Libraries/schematic-symbols.excalidrawlib",
     "电脑实用/欢迎.md",
     "Excalidraw/Drawing 2026-10-12 12.30.37.excalidraw.md",
     "Excalidraw/Drawing 2026-10-12 12.19.30.excalidraw.md",
@@ -222,7 +233,6 @@
     "Excalidraw/Drawing 2026-10-12 12.08.07.excalidraw.md",
     "未命名.canvas",
     "Excalidraw/Drawing 2026-10-12 12.06.27.excalidraw.md",
-    "2026-10-12.md",
-    "8dd8de88ce634cc58ad046ff1ab280f7.png"
+    "2026-10-12.md"
   ]
 }

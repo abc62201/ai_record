@@ -25,7 +25,7 @@ import sys
 指定文件类型 = {'.txt', '.md'}
 
 # 排除的路径(目录名)
-排除的路径 = {'.git', '.obsidian'}
+排除的路径 = {'.git', '.obsidian','Excalidraw图库'}
 
 # 每个扫描目录内部放一个给AI阅读的索引文件
 record文件名 = 'record.txt'
@@ -39,7 +39,7 @@ readme文件名 = 'README.md'
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 def 扫描目录(scan_dir_name):
-    """扫描指定子目录, 返回文件列表"""
+    """扫描指定子目录(包含所有子目录), 返回文件列表"""
     scan_path = os.path.join(script_dir, scan_dir_name)
     
     if not os.path.isdir(scan_path):
@@ -47,41 +47,40 @@ def 扫描目录(scan_dir_name):
         return []
     
     files = []
-    for entry in os.listdir(scan_path):
-        # 跳过索引文件自身
-        if entry == record文件名 or entry == readme文件名:
-            continue
+    # 使用 os.walk 递归遍历所有子目录
+    for root, dirs, filenames in os.walk(scan_path):
+        # 优化：直接在遍历时排除指定目录，避免进入 .git 等目录浪费时间
+        dirs[:] = [d for d in dirs if not any(excluded in d for excluded in 排除的路径)]
         
-        # 检查文件扩展名
-        ext = os.path.splitext(entry)[1].lower()
-        if ext not in 指定文件类型:
-            continue
-        
-        # 检查是否在排除路径中
-        skip = False
-        for excluded in 排除的路径:
-            if excluded in entry:
-                skip = True
-                break
-        if skip:
-            continue
-        
-        # 读取文件第一行非空文字作为描述
-        desc = entry.rsplit('.', 1)[0]  # 默认用文件名(去扩展名)
-        
-        relative_path = os.path.join(scan_dir_name, entry)
-        
-        # 构建两种URL
-        ai_url = 给AI直接获取的 + relative_path.replace('\\', '/')
-        readme_url = 写到README的 + relative_path.replace('\\', '/')
-        
-        files.append({
-            'file': entry,
-            'desc': desc,
-            'ai_url': ai_url,
-            'readme_url': readme_url,
-            'relative_path': relative_path
-        })
+        for entry in filenames:
+            # 跳过索引文件自身
+            if entry == record文件名 or entry == readme文件名:
+                continue
+            
+            # 检查文件扩展名
+            ext = os.path.splitext(entry)[1].lower()
+            if ext not in 指定文件类型:
+                continue
+            
+            # 获取文件的完整路径，并计算相对于项目根目录的路径
+            full_path = os.path.join(root, entry)
+            # 使用 relpath 支持多级子目录，并将反斜杠替换为正斜杠以适配 URL
+            relative_path = os.path.relpath(full_path, script_dir).replace('\\', '/')
+            
+            # 默认用文件名(去扩展名)作为描述
+            desc = entry.rsplit('.', 1)[0]  
+            
+            # 构建两种URL
+            ai_url = 给AI直接获取的 + relative_path
+            readme_url = 写到README的 + relative_path
+            
+            files.append({
+                'file': entry,
+                'desc': desc,
+                'ai_url': ai_url,
+                'readme_url': readme_url,
+                'relative_path': relative_path
+            })
     
     # 按文件名排序
     files.sort(key=lambda x: x['file'])

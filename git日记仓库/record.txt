@@ -1,4 +1,6 @@
 # git日记仓库 目录索引
 # 自动生成, 请勿手动修改
 
-1.欢迎:https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/欢迎.md
+1.t1.excalidraw:https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/Excalidraw/t1.excalidraw.md
+2.微软电脑管家与一些快捷键:https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/电脑实用/微软电脑管家与一些快捷键.md
+3.欢迎:https://gitee.com/abc62201/ai_record/raw/master/git日记仓库/电脑实用/欢迎.md
