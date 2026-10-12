@@ -145,7 +145,8 @@
 
 ### 用户打赏
 
-![微信|344](image/wechat_pay.png)![[image/alipay.png|311]]
+<img src="image/wechat_pay.png" alt="微信" width="344">
+<img src="image/alipay.png" alt="支付宝" width="311">
 
 
 
