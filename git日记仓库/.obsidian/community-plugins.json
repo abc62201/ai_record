@@ -1,5 +1,7 @@
 [
   "editing-toolbar",
   "calendar",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "obsidian-kanban",
+  "sticky-notes"
 ]

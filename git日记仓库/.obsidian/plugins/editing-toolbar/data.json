@@ -350,6 +350,11 @@
       "id": "workspace:export-pdf",
       "name": "导出为 PDF",
       "icon": "editingToolbar"
+    },
+    {
+      "id": "obsidian-kanban:create-new-kanban-board",
+      "name": "Kanban: Create new board",
+      "icon": "editingToolbarAdd"
     }
   ],
   "followingCommands": [
