@@ -47,7 +47,7 @@
 
 | # | 描述 | 文件 |
 | :---: | :--- | :---: |
-| 1 | [2026-10-12 nextclod插件安装](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/电脑实用/2026-10-12 nextclod插件安装.md) | `2026-10-12 nextclod插件安装.md` |
+| 1 | [2026-10-12_nextclod插件安装](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/电脑实用/2026-10-12_nextclod插件安装.md) | `2026-10-12_nextclod插件安装.md` |
 | 2 | [t1.excalidraw](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/Excalidraw/t1.excalidraw.md) | `t1.excalidraw.md` |
 | 3 | [微软电脑管家与一些快捷键](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/电脑实用/微软电脑管家与一些快捷键.md) | `微软电脑管家与一些快捷键.md` |
 | 4 | [欢迎](https://gitee.com/abc62201/ai_record/tree/master/git日记仓库/电脑实用/欢迎.md) | `欢迎.md` |
