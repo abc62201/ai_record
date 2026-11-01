@@ -9,12 +9,12 @@
 | 指标 | 数值 |
 | :--- | :---: |
 | 目录数 | 2 |
-| 文件总数 | 12 |
+| 文件总数 | 21 |
 | 支持格式 | .md, .txt |
 
 ## 🧭 快速导航
 
-- <a href="#-ai">ai</a>（7 个文件）
+- <a href="#-ai">ai</a>（16 个文件）
 - <a href="#-git日记仓库">git日记仓库</a>（5 个文件）
 
 ---
@@ -29,11 +29,20 @@
 | :---: | :--- | :---: |
 | 1 | [2026-10-6日会意财务助手更新思路](https://gitee.com/abc62201/ai_record/tree/master/ai/2026-10-6日会意财务助手更新思路.txt) | `2026-10-6日会意财务助手更新思路.txt` |
 | 2 | [PotPlayer](https://gitee.com/abc62201/ai_record/tree/master/ai/PotPlayer.txt) | `PotPlayer.txt` |
-| 3 | [ai财务助手软件功能及制作思路](https://gitee.com/abc62201/ai_record/tree/master/ai/ai财务助手软件功能及制作思路.txt) | `ai财务助手软件功能及制作思路.txt` |
-| 4 | [gitee密码自动缓存](https://gitee.com/abc62201/ai_record/tree/master/ai/gitee密码自动缓存.txt) | `gitee密码自动缓存.txt` |
-| 5 | [会意财务助手演示文本](https://gitee.com/abc62201/ai_record/tree/master/ai/会意财务助手演示文本.txt) | `会意财务助手演示文本.txt` |
-| 6 | [本地密码记录器](https://gitee.com/abc62201/ai_record/tree/master/ai/本地密码记录器.txt) | `本地密码记录器.txt` |
-| 7 | [贷款还款json数据做UI](https://gitee.com/abc62201/ai_record/tree/master/ai/贷款还款json数据做UI.txt) | `贷款还款json数据做UI.txt` |
+| 3 | [ai_example](https://gitee.com/abc62201/ai_record/tree/master/ai/ai_example.txt) | `ai_example.txt` |
+| 4 | [ai财务助手软件功能及制作思路](https://gitee.com/abc62201/ai_record/tree/master/ai/ai财务助手软件功能及制作思路.txt) | `ai财务助手软件功能及制作思路.txt` |
+| 5 | [gitee密码自动缓存](https://gitee.com/abc62201/ai_record/tree/master/ai/gitee密码自动缓存.txt) | `gitee密码自动缓存.txt` |
+| 6 | [从第一台光刻机开始大纲](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始大纲.txt) | `从第一台光刻机开始大纲.txt` |
+| 7 | [从第一台光刻机开始第一阶段](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第一阶段.txt) | `从第一台光刻机开始第一阶段.txt` |
+| 8 | [从第一台光刻机开始第三阶段](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第三阶段.txt) | `从第一台光刻机开始第三阶段.txt` |
+| 9 | [从第一台光刻机开始第二阶段](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第二阶段.txt) | `从第一台光刻机开始第二阶段.txt` |
+| 10 | [从第一台光刻机开始第五阶段](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第五阶段.txt) | `从第一台光刻机开始第五阶段.txt` |
+| 11 | [从第一台光刻机开始第四阶段1](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第四阶段1.txt) | `从第一台光刻机开始第四阶段1.txt` |
+| 12 | [从第一台光刻机开始第四阶段2](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第四阶段2.txt) | `从第一台光刻机开始第四阶段2.txt` |
+| 13 | [从第一台光刻机开始第四阶段3](https://gitee.com/abc62201/ai_record/tree/master/ai/小说从第一台光刻机开始/从第一台光刻机开始第四阶段3.txt) | `从第一台光刻机开始第四阶段3.txt` |
+| 14 | [会意财务助手演示文本](https://gitee.com/abc62201/ai_record/tree/master/ai/会意财务助手演示文本.txt) | `会意财务助手演示文本.txt` |
+| 15 | [本地密码记录器](https://gitee.com/abc62201/ai_record/tree/master/ai/本地密码记录器.txt) | `本地密码记录器.txt` |
+| 16 | [贷款还款json数据做UI](https://gitee.com/abc62201/ai_record/tree/master/ai/贷款还款json数据做UI.txt) | `贷款还款json数据做UI.txt` |
 
 <div align="right"><a href="#top">⬆ 返回顶部</a></div>
 
